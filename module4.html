@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 04: Ideation & Innovation Tools - Editorial Edition</title>
+    <style>
+        /* THEME: NEO-BRUTALIST EDITORIAL (SHARED SYSTEM) */
+        :root {
+            --slide-width: 1280px;
+            --slide-height: 720px;
+            --bg-paper: #F2F0E9;
+            --ink-black: #1a1a1a;
+            --accent-red: #E63946;
+            --accent-blue: #457B9D;
+            --accent-yellow: #FFB703;
+            --accent-green: #2A9D8F;
+            --accent-purple: #7b2cbf;
+            --accent-orange: #F4A261;
+            --border-thick: 3px solid var(--ink-black);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #333;
+            font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .slide {
+            width: var(--slide-width);
+            height: var(--slide-height);
+            background-color: var(--bg-paper);
+            background-image: radial-gradient(var(--ink-black) 1px, transparent 1px);
+            background-size: 30px 30px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid #000;
+            box-shadow: 0 0 0 10px #222;
+            color: var(--ink-black);
+            page-break-after: always;
+        }
+
+        .container {
+            padding: 50px 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--bg-paper);
+        }
+
+        /* Layouts */
+        .layout-50-50 { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+        .layout-60-40 { display: grid; grid-template-columns: 1.5fr 1fr; height: 100%; }
+        .grid-layout { display: grid; height: 100%; width: 100%; }
+
+        /* Typography */
+        h1 { font-size: 4.5rem; font-weight: 800; line-height: 0.95; text-transform: uppercase; letter-spacing: -2px; margin-bottom: 20px; }
+        h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 25px; background: var(--ink-black); color: var(--bg-paper); display: inline-block; padding: 5px 15px; transform: skew(-2deg); }
+        h3 { font-size: 1.4rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; border-bottom: 2px solid var(--ink-black); padding-bottom: 5px; margin-bottom: 20px; display: inline-block; }
+        p { font-size: 1.25rem; line-height: 1.5; margin-bottom: 20px; font-weight: 500; }
+        strong { font-weight: 800; }
+
+        /* Components */
+        .b-card {
+            background: white;
+            border: var(--border-thick);
+            box-shadow: 6px 6px 0px var(--ink-black);
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .tag {
+            background: var(--accent-yellow);
+            color: var(--ink-black);
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 2px solid var(--ink-black);
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        ul.check-list li {
+            list-style: none; font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center;
+        }
+        ul.check-list li::before {
+            content: ""; width: 15px; height: 15px; background: var(--ink-black); margin-right: 15px; flex-shrink: 0;
+        }
+
+        /* Footer */
+        .footer-strip {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 40px;
+            background: var(--ink-black); color: white;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 40px; font-family: monospace; font-size: 0.9rem;
+        }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .slide { box-shadow: none; margin: 0; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: TITLE -->
+    <section class="slide">
+        <div class="grid-layout" style="grid-template-rows: 3fr 1fr;">
+            <div style="padding: 80px; display: flex; flex-direction: column; justify-content: center; border-bottom: 3px solid black;">
+                <div class="tag">IIM BANGALORE (DBE)</div>
+                <h1>Ideation, Tools &<br>Communication.</h1>
+                <p style="font-size: 1.5rem; margin-top: 20px; max-width: 600px;">
+                    <strong>Module 04:</strong> Generating breakthroughs, Blue Ocean Strategy, and selling your ideas.
+                </p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--accent-purple);">
+                <div style="border-right: 3px solid black; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; color: white;">IDEATION</div>
+                <div style="border-right: 3px solid black; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; color: white;">TOOLS</div>
+                <div style="display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; color: white;">STORYTELLING</div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>COURSE: ENTREPRENEURSHIP</span><span>SLIDE 01 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 2: IDEATION RULES -->
+    <section class="slide">
+        <div class="layout-50-50">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">RULE #1</span>
+                <h2>Quantity over Quality</h2>
+                <div class="b-card" style="border-left: 10px solid var(--accent-yellow);">
+                    <strong>Key Insight:</strong><br>
+                    Quality emerges from quantity. 
+                    <br><em>(550 ideas &rarr; 50 strong ideas)</em>
+                </div>
+                <ul class="check-list">
+                    <li>Do not eliminate early.</li>
+                    <li>Fuse ideas, don't discard.</li>
+                    <li><strong>Best Unit:</strong> A Pair (Diverse).</li>
+                </ul>
+            </div>
+            <div class="container" style="background: #e5e5e5; justify-content: center;">
+                <h3 style="margin-bottom: 30px;">The Methodology</h3>
+                
+                <div class="b-card" style="background: #f8d7da; border-color: var(--accent-red); opacity: 0.6;">
+                    <h4 style="color: var(--accent-red); text-transform: uppercase;">Brainstorming (Fails)</h4>
+                    <p style="font-size: 1rem; margin-top: 10px;">Groupthink, Fear of judgment, Social loafing.</p>
+                </div>
+                
+                <div style="text-align: center; font-size: 2rem; font-weight: bold;">&darr;</div>
+
+                <div class="b-card" style="background: #d4edda; border-color: var(--accent-green); border-width: 5px;">
+                    <h4 style="color: var(--accent-green); text-transform: uppercase;">Brain WRITING (Wins)</h4>
+                    <ul style="font-size: 1rem; margin-top: 10px; padding-left: 20px;">
+                        <li>Silent writing/sketching.</li>
+                        <li>Use Post-its.</li>
+                        <li>Time-bound (10 mins).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>RULES OF IDEATION</span><span>SLIDE 02 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 3: CHALLENGING ASSUMPTIONS -->
+    <section class="slide">
+        <div class="container">
+            <span class="tag">TOOL #1</span>
+            <h2>Challenging Assumptions</h2>
+            <p><strong>Innovation = Attacking what we take for granted.</strong></p>
+            
+            <div class="b-card" style="background: var(--ink-black); color: white; margin-top: 20px;">
+                CASE STUDY: <strong>UPI (Unified Payments Interface)</strong>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+                <div class="b-card" style="background: #ddd; border-style: dashed;">
+                    <h3 style="color: #666;">OLD Assumptions</h3>
+                    <ul class="check-list" style="margin-top: 20px; color: #555;">
+                        <li>Need Account Number.</li>
+                        <li>Need IFSC Code.</li>
+                        <li>Banking hours matter.</li>
+                        <li>Add Beneficiary (wait 30 mins).</li>
+                    </ul>
+                </div>
+                <div class="b-card" style="border: 3px solid var(--accent-blue);">
+                    <h3 style="color: var(--accent-blue);">NEW System</h3>
+                    <ul class="check-list" style="margin-top: 20px;">
+                        <li><strong>Phone Number</strong> is enough.</li>
+                        <li><strong>Instant</strong> Transfer.</li>
+                        <li><strong>24x7</strong> Access.</li>
+                        <li><strong>QR Code</strong> Scan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>CHALLENGING ASSUMPTIONS</span><span>SLIDE 03 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 4: BLUE OCEAN TRIGGERS -->
+    <section class="slide">
+        <div class="container">
+            <span class="tag">TOOL #2</span>
+            <h2>Blue Ocean Triggers</h2>
+            <p>6 Paths to create uncontested market space.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 30px;">
+                <div class="b-card" style="border-top: 6px solid var(--accent-blue);">
+                    <strong>1. Alternative Industries</strong><br>
+                    <span style="color: #666;">Ola vs. Autos/Logistics</span>
+                </div>
+                <div class="b-card" style="border-top: 6px solid var(--accent-red);">
+                    <strong>2. Strategic Groups</strong><br>
+                    <span style="color: #666;">Fevicol (Carpenters + Kids)</span>
+                </div>
+                <div class="b-card" style="border-top: 6px solid var(--accent-yellow);">
+                    <strong>3. Buyer Groups</strong><br>
+                    <span style="color: #666;">Airbnb (Budget travelers)</span>
+                </div>
+                <div class="b-card" style="border-top: 6px solid var(--accent-green);">
+                    <strong>4. Complements</strong><br>
+                    <span style="color: #666;">Maruti (Driving School)</span>
+                </div>
+                <div class="b-card" style="border-top: 6px solid var(--accent-purple);">
+                    <strong>5. Functional ↔ Emotional</strong><br>
+                    <span style="color: #666;">Apple (Emotion), Insurance (Cost)</span>
+                </div>
+                <div class="b-card" style="border-top: 6px solid var(--accent-orange);">
+                    <strong>6. Time & Trends</strong><br>
+                    <span style="color: #666;">Kulhad Tea, Organic Food</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>BLUE OCEAN STRATEGY</span><span>SLIDE 04 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 5: USER TIERS -->
+    <section class="slide">
+        <div class="layout-60-40">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">TOOL #3</span>
+                <h2>4 Tiers of Users</h2>
+                <div class="b-card">
+                    <strong>Insight:</strong> Biggest growth comes from "Unexplored" users, not loyal ones.
+                </div>
+                <ul class="check-list" style="margin-top: 20px;">
+                    <li><strong>Loyal:</strong> Smallest group.</li>
+                    <li><strong>Dissatisfied:</strong> Use out of necessity.</li>
+                    <li><strong>Refusing:</strong> Consciously avoid you.</li>
+                    <li><strong>Unexplored:</strong> New markets (Biggest).</li>
+                </ul>
+                <p style="margin-top: 20px; font-weight: bold;">Case: DigiYatra (Simplicity for Refusing users)</p>
+            </div>
+            
+            <div class="container" style="background: var(--ink-black); color: white; justify-content: center; align-items: center;">
+                <!-- INVERTED PYRAMID SVG -->
+                <svg width="300" height="300" viewBox="0 0 300 300">
+                    <!-- Unexplored (Biggest) -->
+                    <polygon points="10,10 290,10 250,90 50,90" fill="var(--accent-green)" stroke="white" stroke-width="2" />
+                    <text x="150" y="60" text-anchor="middle" fill="black" font-weight="bold">UNEXPLORED (New)</text>
+                    
+                    <!-- Refusing -->
+                    <polygon points="50,90 250,90 220,160 80,160" fill="var(--accent-yellow)" stroke="white" stroke-width="2" />
+                    <text x="150" y="135" text-anchor="middle" fill="black" font-weight="bold">REFUSING</text>
+                    
+                    <!-- Dissatisfied -->
+                    <polygon points="80,160 220,160 190,230 110,230" fill="var(--accent-orange)" stroke="white" stroke-width="2" />
+                    <text x="150" y="205" text-anchor="middle" fill="black" font-weight="bold">DISSATISFIED</text>
+                    
+                    <!-- Loyal (Smallest) -->
+                    <polygon points="110,230 190,230 150,290" fill="var(--accent-red)" stroke="white" stroke-width="2" />
+                    <text x="150" y="260" text-anchor="middle" fill="white" font-weight="bold" font-size="10">LOYAL</text>
+                </svg>
+            </div>
+        </div>
+        <div class="footer-strip"><span>USER TIERS</span><span>SLIDE 05 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 6: BIOMIMICRY -->
+    <section class="slide">
+        <div class="container">
+            <span class="tag">TOOL #4</span>
+            <h2>Analogy & Biomimicry</h2>
+            <p>"Breadth creates breakthroughs." Look outside your industry.</p>
+            
+            <div style="display: flex; gap: 40px; margin-top: 40px;">
+                <div class="b-card" style="flex: 1; border-top: 10px solid var(--accent-blue);">
+                    <h3>Nature</h3>
+                    <p style="font-size: 1.5rem; font-weight: 800; margin-top: 20px;">Kingfisher Beak</p>
+                    <div style="font-size: 2rem; margin: 10px 0;">&darr;</div>
+                    <p style="font-size: 1.5rem; font-weight: 800;">Bullet Train</p>
+                    <p>(Solves noise & tunnel boom)</p>
+                </div>
+                
+                <div class="b-card" style="flex: 1; border-top: 10px solid var(--accent-red);">
+                    <h3>Industry</h3>
+                    <p style="font-size: 1.5rem; font-weight: 800; margin-top: 20px;">Supermarket</p>
+                    <div style="font-size: 2rem; margin: 10px 0;">&darr;</div>
+                    <p style="font-size: 1.5rem; font-weight: 800;">Toyota JIT</p>
+                    <p>(Only restock what is taken)</p>
+                </div>
+
+                <div class="b-card" style="flex: 1; border-top: 10px solid var(--accent-purple);">
+                    <h3>Extremes</h3>
+                    <p style="font-size: 1.5rem; font-weight: 800; margin-top: 20px;">Hearing Impaired</p>
+                    <div style="font-size: 2rem; margin: 10px 0;">&darr;</div>
+                    <p style="font-size: 1.5rem; font-weight: 800;">Subtitles</p>
+                    <p>(Universal use in noisy bars)</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>ANALOGY</span><span>SLIDE 06 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 7: STORYTELLING -->
+    <section class="slide">
+        <div class="layout-50-50">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">COMMUNICATION</span>
+                <h2>Selling Ideas</h2>
+                <p>Ideas fail due to poor communication. Humans remember stories, not data.</p>
+                
+                <div class="b-card">
+                    <strong>SCQA Framework:</strong><br>
+                    <strong>S</strong>ituation (Status quo)<br>
+                    <strong>C</strong>omplication (Problem)<br>
+                    <strong>Q</strong>uestion (How to fix?)<br>
+                    <strong>A</strong>nswer (Your Idea)
+                </div>
+                <div class="b-card">
+                    <strong>SUCCESS Principle:</strong><br>
+                    Simple, Unexpected, Concrete, Credible, Emotional, Story.
+                </div>
+            </div>
+            
+            <div class="container" style="background: #fff3cd; justify-content: center; align-items: center;">
+                <h3 style="margin-bottom: 20px;">The Pyramid Principle</h3>
+                <!-- PYRAMID SVG -->
+                <svg width="300" height="300" viewBox="0 0 300 300">
+                    <!-- Top (Answer) -->
+                    <rect x="100" y="20" width="100" height="60" fill="var(--accent-red)" stroke="black" stroke-width="3"/>
+                    <text x="150" y="55" text-anchor="middle" font-weight="bold" fill="white">ANSWER</text>
+                    
+                    <!-- Middle (Arguments) -->
+                    <rect x="50" y="100" width="90" height="60" fill="var(--accent-blue)" stroke="black" stroke-width="3"/>
+                    <rect x="160" y="100" width="90" height="60" fill="var(--accent-blue)" stroke="black" stroke-width="3"/>
+                    <text x="95" y="135" text-anchor="middle" font-weight="bold" fill="white" font-size="10">ARGUMENT</text>
+                    <text x="205" y="135" text-anchor="middle" font-weight="bold" fill="white" font-size="10">ARGUMENT</text>
+                    
+                    <!-- Bottom (Data) -->
+                    <rect x="20" y="180" width="60" height="60" fill="var(--ink-black)" stroke="black" stroke-width="3"/>
+                    <rect x="90" y="180" width="60" height="60" fill="var(--ink-black)" stroke="black" stroke-width="3"/>
+                    <rect x="160" y="180" width="60" height="60" fill="var(--ink-black)" stroke="black" stroke-width="3"/>
+                    <rect x="230" y="180" width="60" height="60" fill="var(--ink-black)" stroke="black" stroke-width="3"/>
+                    <text x="150" y="270" text-anchor="middle" font-weight="bold">DATA & EVIDENCE</text>
+                    
+                    <!-- Lines -->
+                    <line x1="150" y1="80" x2="150" y2="100" stroke="black" stroke-width="2"/>
+                    <line x1="95" y1="160" x2="95" y2="180" stroke="black" stroke-width="2"/>
+                    <line x1="205" y1="160" x2="205" y2="180" stroke="black" stroke-width="2"/>
+                </svg>
+            </div>
+        </div>
+        <div class="footer-strip"><span>STORYTELLING</span><span>SLIDE 07 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 8: SWEET SPOT (VENN) -->
+    <section class="slide">
+        <div class="container" style="align-items: center;">
+            <span class="tag">PRIORITIZATION</span>
+            <h2>The Innovation Sweet Spot</h2>
+            
+            <div style="position: relative; width: 500px; height: 500px; margin-top: 20px;">
+                <!-- Desirability -->
+                <div style="position: absolute; top: 0; left: 100px; width: 300px; height: 300px; border-radius: 50%; border: 4px solid black; background: rgba(230, 57, 70, 0.4); display: flex; justify-content: center; align-items: flex-start; padding-top: 40px;">
+                    <span style="font-weight: 900; font-size: 1.2rem;">DESIRABILITY<br>(Human)</span>
+                </div>
+                
+                <!-- Viability -->
+                <div style="position: absolute; bottom: 0; right: 0; width: 300px; height: 300px; border-radius: 50%; border: 4px solid black; background: rgba(69, 123, 157, 0.4); display: flex; justify-content: flex-end; align-items: center; padding-right: 40px;">
+                    <span style="font-weight: 900; font-size: 1.2rem; text-align: right;">VIABILITY<br>(Business)</span>
+                </div>
+                
+                <!-- Feasibility -->
+                <div style="position: absolute; bottom: 0; left: 0; width: 300px; height: 300px; border-radius: 50%; border: 4px solid black; background: rgba(255, 183, 3, 0.4); display: flex; justify-content: flex-start; align-items: center; padding-left: 40px;">
+                    <span style="font-weight: 900; font-size: 1.2rem; text-align: left;">FEASIBILITY<br>(Tech)</span>
+                </div>
+                
+                <!-- Center -->
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;">
+                    <div style="background: black; color: white; padding: 10px 20px; font-weight: bold; font-size: 1.2rem; border: 2px solid white;">SUCCESS</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>SWEET SPOT</span><span>SLIDE 08 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 9: IMPACT MATRIX -->
+    <section class="slide">
+        <div class="layout-50-50">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">SELECTION</span>
+                <h2>Impact-Time Matrix</h2>
+                <div class="b-card">
+                    Don't try to do everything. Categorize your ideas.
+                </div>
+                <ul class="check-list">
+                    <li><strong>Starters:</strong> Quick Wins. Do now.</li>
+                    <li><strong>Stars:</strong> High Impact. Focus here.</li>
+                    <li><strong>Pipelines:</strong> Long-term bets.</li>
+                </ul>
+                <div class="b-card" style="margin-top: 20px; border-left: 8px solid var(--accent-blue);">
+                    <strong>MECE Framework:</strong><br>
+                    Mutually Exclusive, Collectively Exhaustive.<br>
+                    (No overlap, no gaps).
+                </div>
+            </div>
+            
+            <div class="container" style="background: #e5e5e5; padding: 40px;">
+                <div style="display: grid; grid-template-columns: 50px 1fr 1fr; grid-template-rows: 1fr 1fr 50px; height: 100%; gap: 5px;">
+                    
+                    <!-- Y Axis -->
+                    <div style="grid-row: 1 / 3; writing-mode: vertical-lr; transform: rotate(180deg); text-align: center; font-weight: bold;">IMPACT</div>
+                    
+                    <!-- Quadrants -->
+                    <div class="b-card" style="margin: 0; background: var(--accent-yellow); display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        STARS<br>(High Impact, Low Time)
+                    </div>
+                    <div class="b-card" style="margin: 0; background: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        PIPELINES<br>(High Impact, High Time)
+                    </div>
+                    <div class="b-card" style="margin: 0; background: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        STARTERS<br>(Low Impact, Low Time)
+                    </div>
+                    <div class="b-card" style="margin: 0; background: #ddd; color: #777; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        PIPE DREAMS<br>(Drop)
+                    </div>
+                    
+                    <!-- X Axis -->
+                    <div></div>
+                    <div style="grid-column: 2 / 4; text-align: center; font-weight: bold; margin-top: 10px;">TIME / EFFORT</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>PRIORITIZATION</span><span>SLIDE 09 / 10</span></div>
+    </section>
+
+    <!-- SLIDE 10: SUMMARY -->
+    <section class="slide">
+        <div class="container" style="text-align: center; align-items: center; background: var(--accent-blue);">
+            <h1 style="margin-bottom: 50px; color: white;">Final Recall</h1>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; width: 100%;">
+                <div class="b-card">
+                    <h3>IDEATE</h3>
+                    <p>Quantity > Quality.<br>Brain Writing > Brainstorming.<br>Look for Blue Oceans.</p>
+                </div>
+                <div class="b-card">
+                    <h3>COMMUNICATE</h3>
+                    <p>SCQA Framework.<br>Pyramid Principle.<br>Tell Stories, not data.</p>
+                </div>
+                <div class="b-card">
+                    <h3>SELECT</h3>
+                    <p>Sweet Spot.<br>Impact-Time Matrix.<br>Creativity + Discipline.</p>
+                </div>
+            </div>
+            
+            <p style="margin-top: 40px; color: white; font-weight: bold;">"Quality of life depends on quality of thinking."</p>
+        </div>
+        <div class="footer-strip" style="background: black; border-top: none;"><span>SUMMARY</span><span>SLIDE 10 / 10</span></div>
+    </section>
+
+</body>
+</html>

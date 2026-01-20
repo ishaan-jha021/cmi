@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 01: Creativity - Editorial Edition</title>
+    <style>
+        /* THEME: NEO-BRUTALIST EDITORIAL
+        Core Concepts: High Contrast, Hard Shadows, Swiss Grid, Paper Texture
+        */
+
+        :root {
+            --slide-width: 1280px;
+            --slide-height: 720px;
+            
+            /* Palette: Earthy, Bold, Print-Like */
+            --bg-paper: #F2F0E9; /* Warm Off-White */
+            --ink-black: #1a1a1a;
+            
+            /* Distinct Accents */
+            --accent-red: #E63946;   /* Alert/Fear */
+            --accent-blue: #457B9D;  /* Duty/Logic */
+            --accent-yellow: #FFB703; /* Highlight */
+            --accent-green: #2A9D8F; /* Growth/Love */
+            
+            --border-thick: 3px solid var(--ink-black);
+            --border-thin: 1px solid var(--ink-black);
+            
+            --shadow-hard: 6px 6px 0px var(--ink-black);
+            --shadow-soft: 4px 4px 0px rgba(0,0,0,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #333;
+            font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        /* --- SLIDE CONTAINER --- */
+        .slide {
+            width: var(--slide-width);
+            height: var(--slide-height);
+            background-color: var(--bg-paper);
+            /* Dot Grid Texture */
+            background-image: radial-gradient(var(--ink-black) 1px, transparent 1px);
+            background-size: 30px 30px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid #000;
+            box-shadow: 0 0 0 10px #222; /* Frame */
+            color: var(--ink-black);
+        }
+
+        /* --- LAYOUT UTILITIES --- */
+        .grid-layout {
+            display: grid;
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            padding: 50px 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--bg-paper); /* Cover dots for text areas */
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            line-height: 0.95;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            background: var(--ink-black);
+            color: var(--bg-paper);
+            display: inline-block;
+            padding: 5px 15px;
+            transform: skew(-2deg); /* Slight editorial skew */
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--ink-black);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        /* --- UI COMPONENTS (Hard Shadows & Borders) --- */
+        
+        /* 1. The Brutalist Card */
+        .b-card {
+            background: white;
+            border: var(--border-thick);
+            box-shadow: var(--shadow-hard);
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.2s;
+        }
+        
+        .b-card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0px var(--ink-black); }
+
+        .tag {
+            background: var(--accent-yellow);
+            color: var(--ink-black);
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 2px solid var(--ink-black);
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* 2. Visual Elements */
+        
+        /* The Timeline / Bar Chart */
+        .chart-bar {
+            background: var(--ink-black);
+            width: 60px;
+            position: relative;
+            border: 2px solid var(--ink-black);
+            transition: height 0.5s;
+        }
+        .chart-bar.accent { background: var(--accent-red); }
+        .chart-bar:hover { background: var(--accent-yellow); }
+
+        /* The Venn (Solid) */
+        .venn-solid {
+            width: 250px; height: 250px;
+            border-radius: 50%;
+            border: 3px solid var(--ink-black);
+            position: absolute;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; font-size: 1.5rem;
+            mix-blend-mode: multiply;
+            opacity: 0.9;
+        }
+        
+        /* The List */
+        ul.check-list li {
+            list-style: none;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        ul.check-list li::before {
+            content: "";
+            width: 15px; height: 15px;
+            background: var(--ink-black);
+            margin-right: 15px;
+        }
+
+        /* 3. Tables */
+        .editorial-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.1rem;
+        }
+        .editorial-table th {
+            text-align: left;
+            border-bottom: 4px solid var(--ink-black);
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        .editorial-table td {
+            border-bottom: 1px solid #ccc;
+            padding: 15px 10px;
+        }
+        .editorial-table tr:last-child td { border: none; }
+
+        /* Footer */
+        .footer-strip {
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            height: 40px;
+            background: var(--ink-black);
+            color: white;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 40px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        /* CSS Grid Layouts specific to slides */
+        .layout-50-50 { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+        .layout-60-40 { display: grid; grid-template-columns: 1.5fr 1fr; height: 100%; }
+        .layout-3-col { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 100%; }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .slide { box-shadow: none; border: 1px solid #ddd; margin: 0; page-break-after: always; background-image: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: TITLE (Poster Style) -->
+    <section class="slide">
+        <div class="grid-layout" style="grid-template-rows: 3fr 1fr;">
+            <div style="padding: 80px; display: flex; flex-direction: column; justify-content: center; border-bottom: 3px solid black;">
+                <div class="tag">IIM BANGALORE (DBE)</div>
+                <h1>Creativity &<br>The Entrepreneurial<br>Mindset.</h1>
+                <p style="font-size: 1.5rem; margin-top: 20px; max-width: 600px;">
+                    <strong>Module 01:</strong> Foundations, Myths, and Strategic Frameworks for the Modern Era.
+                </p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--accent-yellow);">
+                <div style="border-right: 3px solid black; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                    FOUNDATIONS
+                </div>
+                <div style="border-right: 3px solid black; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                    PROCESS
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">
+                    STRATEGY
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip">
+            <span>COURSE: ENTREPRENEURSHIP</span>
+            <span>SLIDE 01</span>
+        </div>
+    </section>
+
+    <!-- SLIDE 2: CONTEXT (Why Now) -->
+    <section class="slide">
+        <div class="layout-50-50">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">CONTEXT</span>
+                <h2>Why Creativity Now?</h2>
+                <p>We are at a historic turning point. It is no longer a luxury; it is a survival skill.</p>
+                
+                <div class="b-card" style="border-left: 10px solid var(--accent-red);">
+                    <strong>1. Rapid Change</strong><br>
+                    Disruptions (AI, Pandemics) happen overnight. Adapt or perish.
+                </div>
+                <div class="b-card" style="border-left: 10px solid var(--accent-blue);">
+                    <strong>2. Job Scarcity</strong><br>
+                    Automation claims the routine. We must be Job Creators.
+                </div>
+            </div>
+            <div class="container" style="background: #e5e5e5;">
+                <!-- Abstract Bar Chart Visual -->
+                <div style="height: 100%; display: flex; align-items: flex-end; justify-content: center; gap: 20px; padding-bottom: 50px;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chart-bar" style="height: 100px;"></div>
+                        <span style="margin-top: 10px; font-weight: bold;">Past</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chart-bar" style="height: 200px;"></div>
+                        <span style="margin-top: 10px; font-weight: bold;">Now</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div class="chart-bar accent" style="height: 350px;"></div>
+                        <span style="margin-top: 10px; font-weight: bold; color: var(--accent-red);">Future</span>
+                    </div>
+                </div>
+                <div style="text-align: center; font-weight: bold;">The Complexity Curve</div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>CONTEXT</span><span>SLIDE 02</span></div>
+    </section>
+
+    <!-- SLIDE 3: DEFINITION (Equation Style) -->
+    <section class="slide">
+        <div class="container" style="align-items: center; text-align: center;">
+            <span class="tag">DEFINITION</span>
+            <h2 style="transform: none; margin-bottom: 60px;">The Creativity Equation</h2>
+            
+            <div style="display: flex; align-items: center; gap: 30px;">
+                <div class="b-card" style="width: 280px; height: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--accent-blue); color: white; border: 3px solid black;">
+                    <div style="font-size: 3rem; font-weight: 800;">NOVEL</div>
+                    <div>(New/Original)</div>
+                </div>
+                
+                <div style="font-size: 4rem; font-weight: 900;">+</div>
+                
+                <div class="b-card" style="width: 280px; height: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: var(--accent-yellow); color: black; border: 3px solid black;">
+                    <div style="font-size: 3rem; font-weight: 800;">UTILITY</div>
+                    <div>(Useful/Value)</div>
+                </div>
+                
+                <div style="font-size: 4rem; font-weight: 900;">=</div>
+                
+                <div class="b-card" style="width: 280px; height: 280px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: white; color: black; border: 3px solid black; box-shadow: 15px 15px 0 black;">
+                    <div style="font-size: 2.5rem; font-weight: 800;">CREATIVITY</div>
+                    <div style="margin-top: 10px; border-top: 2px solid black; padding-top: 5px; font-weight: bold;">ENTREPRENEURSHIP</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>DEFINITION</span><span>SLIDE 03</span></div>
+    </section>
+
+    <!-- SLIDE 4: PROCESS (The Ladder) -->
+    <section class="slide">
+        <div class="layout-60-40">
+            <div class="container">
+                <span class="tag">METHODOLOGY</span>
+                <h2>The 5 Discovery Skills</h2>
+                <p>Innovation is not magic. It is a set of behavioral habits.</p>
+                
+                <ul class="check-list">
+                    <li><strong>1. Questioning:</strong> Ask "Why?" like a child. Challenge constraints.</li>
+                    <li><strong>2. Observing:</strong> Look for gaps in the real world (not screens).</li>
+                    <li><strong>3. Experimenting:</strong> Fail fast to learn fast. (e.g., Ola Labs).</li>
+                    <li><strong>4. Networking:</strong> Diverse ideas, not just contacts.</li>
+                    <li><strong>5. Associating:</strong> Connecting the dots (Cognitive Skill).</li>
+                </ul>
+            </div>
+            <div class="container" style="background: var(--ink-black); color: white; padding: 0;">
+                <!-- Visual Steps -->
+                <div style="display: flex; flex-direction: column; height: 100%;">
+                    <div style="flex: 1; border-bottom: 1px solid #555; padding: 20px; display: flex; align-items: center; font-size: 2rem; font-weight: bold; color: #555;">01</div>
+                    <div style="flex: 1; border-bottom: 1px solid #555; padding: 20px; display: flex; align-items: center; font-size: 2rem; font-weight: bold; color: #777;">02</div>
+                    <div style="flex: 1; border-bottom: 1px solid #555; padding: 20px; display: flex; align-items: center; font-size: 2rem; font-weight: bold; color: #999;">03</div>
+                    <div style="flex: 1; border-bottom: 1px solid #555; padding: 20px; display: flex; align-items: center; font-size: 2rem; font-weight: bold; color: #bbb;">04</div>
+                    <div style="flex: 1; background: var(--accent-yellow); color: black; padding: 20px; display: flex; align-items: center; justify-content: space-between;">
+                        <span style="font-weight: bold; font-size: 1.5rem;">05 ASSOCIATING</span>
+                        <span style="font-size: 2rem;">&#8594;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>PROCESS</span><span>SLIDE 04</span></div>
+    </section>
+
+    <!-- SLIDE 5: MYTHS (Split Contrast) -->
+    <section class="slide">
+        <div class="layout-50-50">
+            <div class="container" style="background: #FFE5E5; border-right: 3px solid black;">
+                <h2 style="background: var(--accent-red); transform: none;">THE MYTH</h2>
+                <ul style="margin-top: 30px; font-size: 1.5rem; font-weight: bold; color: #8a1c1c; list-style: square; padding-left: 20px;">
+                    <li style="margin-bottom: 20px;">It's Genetic.</li>
+                    <li style="margin-bottom: 20px;">It's purely "Art".</li>
+                    <li style="margin-bottom: 20px;">Requires Chaos.</li>
+                    <li style="margin-bottom: 20px;">Only for Geniuses.</li>
+                </ul>
+            </div>
+            <div class="container" style="background: #E5FFE5;">
+                <h2 style="background: var(--accent-green); transform: none;">THE REALITY</h2>
+                <ul style="margin-top: 30px; font-size: 1.5rem; font-weight: bold; color: #1c521c; list-style: square; padding-left: 20px;">
+                    <li style="margin-bottom: 20px;">It's a SKILL.</li>
+                    <li style="margin-bottom: 20px;">It's a SCIENCE.</li>
+                    <li style="margin-bottom: 20px;">Needs DISCIPLINE.</li>
+                    <li style="margin-bottom: 20px;">Attitude > IQ.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-strip"><span>MYTHS</span><span>SLIDE 05</span></div>
+    </section>
+
+    <!-- SLIDE 6: TECH (Box Style) -->
+    <section class="slide">
+        <div class="container">
+            <span class="tag">TECHNOLOGY</span>
+            <h2>Man vs. Machine</h2>
+            
+            <div style="display: flex; gap: 40px; margin-top: 30px;">
+                <div class="b-card" style="flex: 1; background: #eee;">
+                    <h3>Machine Domain</h3>
+                    <p>Computation, Memory, Speed, Repetition.</p>
+                    <div style="margin-top: 20px; font-size: 3rem;">🤖</div>
+                </div>
+                
+                <div class="b-card" style="flex: 1; background: var(--bg-paper); border: 3px solid var(--accent-blue);">
+                    <h3>Human Domain</h3>
+                    <p>Empathy, Ambiguity, <strong>Lateral Thinking</strong>.</p>
+                    <div style="margin-top: 20px; font-size: 3rem;">🧠</div>
+                </div>
+            </div>
+            
+            <div class="b-card" style="background: var(--ink-black); color: white; margin-top: 20px;">
+                "Humans are becoming machines while trying to make machines human."
+            </div>
+        </div>
+        <div class="footer-strip"><span>TECHNOLOGY</span><span>SLIDE 06</span></div>
+    </section>
+
+    <!-- SLIDE 7: DRIVERS (Grid) -->
+    <section class="slide">
+        <div class="container">
+            <span class="tag">PSYCHOLOGY</span>
+            <h2>The 4 Drivers</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; margin-top: 30px; height: 300px;">
+                <div class="b-card" style="background: #F8D7DA; color: #721c24; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 800;">FEAR</div>
+                    <div style="margin-top: 10px;">Survival.<br>Exhausting.</div>
+                </div>
+                <div class="b-card" style="background: #FFF3CD; color: #856404; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 800;">GREED</div>
+                    <div style="margin-top: 10px;">More.<br>Unsatisfied.</div>
+                </div>
+                <div class="b-card" style="background: #D1ECF1; color: #0c5460; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 800;">DUTY</div>
+                    <div style="margin-top: 10px;">Obligation.<br>Limited.</div>
+                </div>
+                <div class="b-card" style="background: var(--accent-green); color: white; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border: 3px solid black; box-shadow: 8px 8px 0 black; transform: scale(1.05);">
+                    <div style="font-size: 1.5rem; font-weight: 800;">LOVE</div>
+                    <div style="margin-top: 10px;">Passion.<br>Sustainable.</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>DRIVERS</span><span>SLIDE 07</span></div>
+    </section>
+
+    <!-- SLIDE 8: STRATEGY (Matrix) -->
+    <section class="slide">
+        <div class="layout-50-50">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">STRATEGY</span>
+                <h2>Zone of Influence</h2>
+                <p>Creativity creates power. Worry creates stress.</p>
+                <div class="b-card">
+                    <strong>Goal:</strong><br>
+                    Focus entirely on Quadrant II (Important / Not Urgent).
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;">
+                <div style="background: #f8f9fa; border-bottom: 2px solid black; border-right: 2px solid black; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <strong>I</strong>
+                    <span>Urgent + Imp</span>
+                </div>
+                <div style="background: var(--accent-yellow); border-bottom: 2px solid black; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <strong style="font-size: 2rem;">II</strong>
+                    <span style="font-weight: bold;">GROWTH ZONE</span>
+                </div>
+                <div style="background: #f8f9fa; border-right: 2px solid black; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <strong>III</strong>
+                    <span>Urgent + Not Imp</span>
+                </div>
+                <div style="background: #e9ecef; padding: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <strong>IV</strong>
+                    <span>Waste</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>STRATEGY</span><span>SLIDE 08</span></div>
+    </section>
+
+    <!-- SLIDE 9: RECALL -->
+    <section class="slide">
+        <div class="container" style="text-align: center; align-items: center; background: var(--accent-yellow);">
+            <h1 style="margin-bottom: 50px;">10-Minute Recall</h1>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; width: 100%;">
+                <div class="b-card">
+                    <h3 style="color: var(--accent-blue);">WHY?</h3>
+                    <p>Survival.<br>Adaptability.<br>Job Creation.</p>
+                </div>
+                <div class="b-card">
+                    <h3 style="color: var(--accent-red);">HOW?</h3>
+                    <p>Question.<br>Observe.<br>Experiment.</p>
+                </div>
+                <div class="b-card">
+                    <h3 style="color: var(--accent-green);">WHERE?</h3>
+                    <p>Zone of Influence.<br>Quadrant II.<br>Driver: Love.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip" style="background: black; border-top: none;"><span>SUMMARY</span><span>SLIDE 09</span></div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 03: Creative Problem Solving - Expanded Edition</title>
+    <style>
+        /* THEME: NEO-BRUTALIST EDITORIAL (SHARED SYSTEM) */
+        :root {
+            --slide-width: 1280px;
+            --slide-height: 720px;
+            --bg-paper: #F2F0E9;
+            --ink-black: #1a1a1a;
+            --accent-red: #E63946;
+            --accent-blue: #457B9D;
+            --accent-yellow: #FFB703;
+            --accent-green: #2A9D8F;
+            --accent-purple: #7b2cbf;
+            --accent-orange: #F4A261;
+            --border-thick: 3px solid var(--ink-black);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: #333;
+            font-family: 'Helvetica Now Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .slide {
+            width: var(--slide-width);
+            height: var(--slide-height);
+            background-color: var(--bg-paper);
+            background-image: radial-gradient(var(--ink-black) 1px, transparent 1px);
+            background-size: 30px 30px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            border: 1px solid #000;
+            box-shadow: 0 0 0 10px #222;
+            color: var(--ink-black);
+            page-break-after: always;
+        }
+
+        .container {
+            padding: 50px 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--bg-paper);
+        }
+
+        /* Layouts */
+        .layout-50-50 { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+        .layout-60-40 { display: grid; grid-template-columns: 1.5fr 1fr; height: 100%; }
+        .grid-layout { display: grid; height: 100%; width: 100%; }
+
+        /* Typography */
+        h1 { font-size: 4.5rem; font-weight: 800; line-height: 0.95; text-transform: uppercase; letter-spacing: -2px; margin-bottom: 20px; }
+        h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 25px; background: var(--ink-black); color: var(--bg-paper); display: inline-block; padding: 5px 15px; transform: skew(-2deg); }
+        h3 { font-size: 1.4rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; border-bottom: 2px solid var(--ink-black); padding-bottom: 5px; margin-bottom: 20px; display: inline-block; }
+        p { font-size: 1.25rem; line-height: 1.5; margin-bottom: 20px; font-weight: 500; }
+        strong { font-weight: 800; }
+
+        /* Components */
+        .b-card {
+            background: white;
+            border: var(--border-thick);
+            box-shadow: 6px 6px 0px var(--ink-black);
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .tag {
+            background: var(--accent-yellow);
+            color: var(--ink-black);
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border: 2px solid var(--ink-black);
+            display: inline-block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        ul.check-list li {
+            list-style: none; font-size: 1.2rem; margin-bottom: 15px; display: flex; align-items: center;
+        }
+        ul.check-list li::before {
+            content: ""; width: 15px; height: 15px; background: var(--ink-black); margin-right: 15px; flex-shrink: 0;
+        }
+
+        .step-number {
+            font-size: 4rem; font-weight: 900; color: rgba(0,0,0,0.1); position: absolute; top: 10px; right: 20px;
+        }
+
+        /* Footer */
+        .footer-strip {
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 40px;
+            background: var(--ink-black); color: white;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 40px; font-family: monospace; font-size: 0.9rem;
+        }
+        
+        @media print {
+            body { background: white; padding: 0; }
+            .slide { box-shadow: none; margin: 0; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1: TITLE -->
+    <section class="slide">
+        <div class="grid-layout" style="grid-template-rows: 3fr 1fr;">
+            <div style="padding: 80px; display: flex; flex-direction: column; justify-content: center; border-bottom: 3px solid black;">
+                <div class="tag">IIM BANGALORE (DBE)</div>
+                <h1>Creative Problem<br>Solving.</h1>
+                <p style="font-size: 1.5rem; margin-top: 20px; max-width: 600px;">
+                    <strong>Module 03 (Expanded):</strong> The Complete Process, Cognitive Modes, and Essential Skills.
+                </p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; background: var(--accent-blue);">
+                <div style="border-right: 3px solid black; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; color: white;">PROCESS</div>
+                <div style="border-right: 3px solid black; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; color: white;">THINKING</div>
+                <div style="display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; color: white;">SKILLS</div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>COURSE: ENTREPRENEURSHIP</span><span>SLIDE 01 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 2: PHILOSOPHY -->
+    <section class="slide">
+        <div class="container">
+            <span class="tag">INTRODUCTION</span>
+            <h2>The Process Philosophy</h2>
+            <div style="display: flex; gap: 40px; margin-top: 40px;">
+                <div class="b-card" style="flex: 1; border-top: 8px solid var(--accent-red);">
+                    <h3>The Big Mistake</h3>
+                    <p>Jumping to solutions too early. This is the #1 killer of creative problem solving.</p>
+                </div>
+                <div class="b-card" style="flex: 1; border-top: 8px solid var(--accent-green);">
+                    <h3>The Golden Rule</h3>
+                    <p style="font-size: 1.4rem; font-weight: 800;">"A problem fully understood is half solved."</p>
+                    <p>Creativity is not just chaos; it is a structured, disciplined process.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>PHILOSOPHY</span><span>SLIDE 02 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 3: STAGE 1 (EXPLORATION) -->
+    <section class="slide">
+        <div class="layout-60-40">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">STAGE 1</span>
+                <h2>Problem Exploration</h2>
+                <div class="step-number">01</div>
+                <div class="b-card" style="border-left: 8px solid var(--accent-blue);">
+                    <strong>Objective:</strong> Understand the real problem (Root Cause), not just the symptom.
+                </div>
+                <ul class="check-list">
+                    <li><strong>Clarify Constraints:</strong> What are the boundaries?</li>
+                    <li><strong>Root Causes:</strong> Ask "What exactly is wrong?"</li>
+                    <li><strong>Crucial Rule:</strong> Do NOT generate solutions here.</li>
+                    <li><strong>Time Allocation:</strong> Spend the MAXIMUM time here.</li>
+                </ul>
+            </div>
+            <div class="container" style="background: var(--ink-black); color: white; justify-content: center; align-items: center; text-align: center;">
+                <!-- AXE SVG VISUAL -->
+                <svg width="200" height="200" viewBox="0 0 100 100" fill="none" stroke="white" stroke-width="2">
+                    <path d="M 60 20 L 80 20 Q 90 40 80 60 L 60 60 L 60 20 Z" fill="white" />
+                    <path d="M 60 20 L 40 20 Q 30 40 40 60 L 60 60" />
+                    <rect x="55" y="60" width="10" height="35" fill="none" stroke="white" />
+                </svg>
+                <div style="margin-top: 30px; font-size: 1.3rem; font-weight: bold; line-height: 1.4;">
+                    "If I had 6 hours to cut a tree, I'd spend 4 sharpening the axe."
+                </div>
+                <div style="margin-top: 15px; color: #aaa; font-style: italic;">— Abraham Lincoln</div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>EXPLORATION</span><span>SLIDE 03 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 4: STAGE 2 (GENERATION) -->
+    <section class="slide">
+        <div class="layout-50-50">
+            <div class="container" style="background: #e5ffe5; border-right: 3px solid black;">
+                <span class="tag" style="background: var(--accent-green); color: white;">STAGE 2</span>
+                <h2>Solution Generation</h2>
+                <div class="step-number">02</div>
+                <h3>"Solution Vegetation"</h3>
+                <p><strong>Objective:</strong> Generate as many ideas as possible. Quantity leads to Quality.</p>
+                <div class="b-card">
+                    <strong>The 3 Rules:</strong><br>
+                    1. No Judgment.<br>
+                    2. No Criticism.<br>
+                    3. No Filtering.
+                </div>
+                <p><strong>Example:</strong> 550 raw ideas &rarr; refined into 50 strong ideas.</p>
+            </div>
+            <div class="container" style="justify-content: center; align-items: center;">
+                <!-- LEGO / BOILING MILK VISUAL -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; width: 300px; margin-bottom: 30px;">
+                    <div style="height: 40px; background: var(--accent-red); border: 2px solid black;"></div>
+                    <div style="height: 40px; background: var(--accent-blue); border: 2px solid black;"></div>
+                    <div style="height: 40px; background: var(--accent-yellow); border: 2px solid black;"></div>
+                    <div style="height: 40px; background: var(--accent-green); border: 2px solid black;"></div>
+                    <div style="height: 40px; background: var(--accent-orange); border: 2px solid black;"></div>
+                    <div style="height: 40px; background: var(--accent-purple); border: 2px solid black;"></div>
+                    <div style="height: 40px; background: var(--ink-black); border: 2px solid black;"></div>
+                    <div style="height: 40px; background: white; border: 2px solid black;"></div>
+                </div>
+                <div style="text-align: center;">
+                    <h3>The Lego Principle</h3>
+                    <p>More blocks (ideas) = More possible combinations.</p>
+                    <div style="margin-top: 20px; font-style: italic; color: #555;">"Like boiling milk: Messy but necessary."</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>GENERATION</span><span>SLIDE 04 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 5: STAGE 3 (VALIDATION) -->
+    <section class="slide">
+        <div class="layout-60-40">
+            <div class="container" style="border-right: 3px solid black;">
+                <span class="tag">STAGE 3</span>
+                <h2>Solution Validation</h2>
+                <div class="step-number">03</div>
+                <h3>"Skimming the Cream"</h3>
+                <div class="b-card" style="border-left: 8px solid var(--accent-red);">
+                    <strong>Objective:</strong> Select the BEST idea, not the most comfortable one.
+                </div>
+                <p>This is where we shift from creativity to analysis.</p>
+                <ul class="check-list">
+                    <li><strong>Key Shift:</strong> Logic > Intuition.</li>
+                    <li><strong>Tools:</strong> Data, Reasoning, Feasibility checks.</li>
+                    <li><strong>Methods:</strong> Compare alternatives, Triangulate with others, Test assumptions.</li>
+                </ul>
+            </div>
+            <div class="container" style="background: #ffe5e5; justify-content: center; align-items: center;">
+                <!-- FUNNEL SVG -->
+                <svg width="250" height="300" viewBox="0 0 200 300">
+                    <polygon points="20,20 180,20 110,180 90,180" fill="white" stroke="black" stroke-width="3" />
+                    <rect x="90" y="180" width="20" height="80" fill="white" stroke="black" stroke-width="3" />
+                    <!-- Drops -->
+                    <circle cx="100" cy="280" r="8" fill="var(--accent-red)" />
+                </svg>
+                <div style="margin-top: 20px; font-weight: bold; font-size: 1.5rem;">THE FILTER</div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>VALIDATION</span><span>SLIDE 05 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 6: THINKING MODES (DEFINITIONS) -->
+    <section class="slide">
+        <div class="container">
+            <span class="tag">COGNITION</span>
+            <h2>Two Distinct Thinking Modes</h2>
+            
+            <div style="display: flex; gap: 40px; margin-top: 40px; height: 100%;">
+                
+                <!-- DIVERGENT -->
+                <div class="b-card" style="flex: 1; border-top: 10px solid var(--accent-green);">
+                    <h3 style="color: var(--accent-green);">1. Divergent Thinking</h3>
+                    <p style="font-size: 1.1rem; color: #555;">(Used in Stage 2: Generation)</p>
+                    <ul class="check-list">
+                        <li><strong>Purpose:</strong> Create multiple possibilities.</li>
+                        <li><strong>Nature:</strong> Expands thinking, encourages originality.</li>
+                        <li><strong>Methods:</strong> Brainstorming, Wild ideas, Multiple viewpoints.</li>
+                        <li><strong>Motto:</strong> "Yes, and..."</li>
+                    </ul>
+                </div>
+
+                <!-- CONVERGENT -->
+                <div class="b-card" style="flex: 1; border-top: 10px solid var(--accent-red);">
+                    <h3 style="color: var(--accent-red);">2. Convergent Thinking</h3>
+                    <p style="font-size: 1.1rem; color: #555;">(Used in Stage 3: Validation)</p>
+                    <ul class="check-list">
+                        <li><strong>Purpose:</strong> Narrow down to the best solution.</li>
+                        <li><strong>Nature:</strong> Logical, Analytical, Evaluative.</li>
+                        <li><strong>Methods:</strong> Selection, Constraints, Feasibility.</li>
+                        <li><strong>Motto:</strong> "Does this work?"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>THINKING MODES</span><span>SLIDE 06 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 7: THE SEQUENCE (DOUBLE DIAMOND) -->
+    <section class="slide">
+        <div class="container" style="text-align: center;">
+            <span class="tag">CRITICAL EXAM POINT</span>
+            <h2>The Correct Sequence</h2>
+            <p style="max-width: 800px; margin: 0 auto 30px auto;">You cannot drive with the brakes on. You cannot expand and contract at the same time.</p>
+
+            <!-- DOUBLE DIAMOND SVG -->
+            <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+                <svg width="800" height="300" viewBox="0 0 800 300">
+                    <!-- Diamond 1 (Problem) -->
+                    <!-- Diamond 2 (Solution) -->
+                    
+                    <!-- Divergent Phase -->
+                    <path d="M 50 150 L 250 50 L 250 250 Z" fill="rgba(42, 157, 143, 0.1)" stroke="var(--accent-green)" stroke-width="3" />
+                    <text x="100" y="155" fill="var(--ink-black)" font-weight="bold">DIVERGENT</text>
+                    
+                    <!-- Convergent Phase -->
+                    <path d="M 250 50 L 450 150 L 250 250 Z" fill="rgba(230, 57, 70, 0.1)" stroke="var(--accent-red)" stroke-width="3" />
+                    <text x="300" y="155" fill="var(--ink-black)" font-weight="bold">CONVERGENT</text>
+                    
+                    <!-- Connection Line -->
+                    <line x1="50" y1="150" x2="450" y2="150" stroke="black" stroke-dasharray="5,5" opacity="0.3" />
+
+                    <!-- Labels -->
+                    <text x="50" y="280" font-family="monospace" font-size="14">START</text>
+                    <text x="450" y="280" font-family="monospace" font-size="14">FINISH</text>
+                </svg>
+            </div>
+
+            <div style="display: flex; gap: 40px; justify-content: center;">
+                <div class="b-card" style="background: #ffe5e5; border-color: var(--accent-red);">
+                    ❌ <strong>WRONG:</strong><br>Convergent before Divergent.<br>(Kills Creativity)
+                </div>
+                <div class="b-card" style="background: #e5ffe5; border-color: var(--accent-green);">
+                    ✅ <strong>RIGHT:</strong><br>Divergent FIRST &rarr; Convergent LATER.<br>(Effective Creativity)
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>SEQUENCE</span><span>SLIDE 07 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 8: SKILL 1 (LISTENING) -->
+    <section class="slide">
+        <div class="layout-60-40">
+            <div class="container">
+                <span class="tag">SKILL #1</span>
+                <h2>Listen with Intent</h2>
+                <p>Listening is a magnet skill for creativity. Use the <strong>RASA</strong> Framework.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                    <div class="b-card" style="border-left: 8px solid var(--accent-blue);">
+                        <h3>R - Receive</h3>
+                        <p>Listen without judgment or filtering. Absorb raw data.</p>
+                    </div>
+                    <div class="b-card" style="border-left: 8px solid var(--accent-yellow);">
+                        <h3>A - Appreciate</h3>
+                        <p>Acknowledge the speaker (Nods, "Hmm"). Does not mean agreement.</p>
+                    </div>
+                    <div class="b-card" style="border-left: 8px solid var(--accent-purple);">
+                        <h3>S - Summarize</h3>
+                        <p>Repeat key points to ensure clarity. "So what you're saying is..."</p>
+                    </div>
+                    <div class="b-card" style="border-left: 8px solid var(--accent-green);">
+                        <h3>A - Ask</h3>
+                        <p>Ask empathetic questions.<br><strong>Say:</strong> "What happened?"<br><strong>Don't Say:</strong> "Why did you do this?"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="background: var(--ink-black); color: white; justify-content: center; align-items: center;">
+                <div style="font-size: 15rem; font-weight: 900; line-height: 0.8; opacity: 0.1; position: absolute;">RASA</div>
+                <h1 style="font-size: 5rem; text-align: right; line-height: 1;">R<br>A<br>S<br>A</h1>
+            </div>
+        </div>
+        <div class="footer-strip"><span>LISTENING SKILL</span><span>SLIDE 08 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 9: SKILL 2 (OBSERVATION) -->
+    <section class="slide">
+        <div class="container" style="background: #E0F7FA; border-right: 3px solid black;">
+            <span class="tag">SKILL #2</span>
+            <h2>Observe with Purpose</h2>
+            
+            <div style="display: flex; align-items: center; gap: 50px; margin-top: 40px;">
+                <div class="b-card" style="flex: 1; padding: 40px;">
+                    <h3>The Attention Rule</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold;">"You observe only what your attention allows."</p>
+                    <p>Creativity requires intentional observation, not just passive seeing.</p>
+                </div>
+                
+                <div style="flex: 1;">
+                    <ul class="check-list">
+                        <li><strong>The Enemy:</strong> Screens reduce peripheral awareness.</li>
+                        <li><strong>The Fix:</strong> Look up. Look around. Notice details.</li>
+                        <li><strong>The Benefit:</strong> Observation feeds the "Expertise" component of creativity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip"><span>OBSERVATION SKILL</span><span>SLIDE 09 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 10: SKILL 3 (DEFER JUDGMENT) -->
+    <section class="slide">
+        <div class="grid-layout" style="grid-template-columns: 1fr 1.5fr;">
+            <div class="container" style="background: var(--ink-black); color: white;">
+                <h1 style="font-size: 3rem; color: var(--accent-red);">DEFER<br>JUDGMENT</h1>
+                <p style="margin-top: 20px;">Judgment is the enemy of learning and creativity.</p>
+                <div style="margin-top: 40px; border: 2px solid white; padding: 20px;">
+                    <strong>Oscar Wilde:</strong><br><br>
+                    "Every saint has a past, and every sinner has a future."
+                </div>
+            </div>
+            <div class="container">
+                <span class="tag">SKILL #3</span>
+                <h2>Why Defer?</h2>
+                <div class="b-card">
+                    <strong>1. It stops situations from unfolding.</strong><br>
+                    You force reality into your existing mental templates.
+                </div>
+                <div class="b-card">
+                    <strong>2. Regret.</strong><br>
+                    People regret judging too early more than judging too late.
+                </div>
+                
+                <h3 style="margin-top: 20px;">Example: Stephen Covey</h3>
+                <p style="font-size: 1.1rem; border-left: 4px solid var(--accent-blue); padding-left: 15px;">
+                    A father on a train let his noisy kids disturb everyone. People judged him as careless.<br>
+                    <strong>The Reality:</strong> His wife had just died an hour ago, and they didn't know how to handle it.<br>
+                    <em>Context changed the entire interpretation.</em>
+                </p>
+            </div>
+        </div>
+        <div class="footer-strip"><span>JUDGMENT SKILL</span><span>SLIDE 10 / 11</span></div>
+    </section>
+
+    <!-- SLIDE 11: SUMMARY -->
+    <section class="slide">
+        <div class="container" style="text-align: center; align-items: center; background: var(--accent-orange);">
+            <h1 style="margin-bottom: 50px;">10-Minute Recall</h1>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; width: 100%;">
+                <div class="b-card">
+                    <h3>PROCESS</h3>
+                    <p>Problem Understanding > Solution Speed.<br>Spend time "sharpening the axe".</p>
+                </div>
+                <div class="b-card">
+                    <h3>SEQUENCE</h3>
+                    <p>Divergent (Open) first.<br>Convergent (Close) later.<br>Never mix them.</p>
+                </div>
+                <div class="b-card">
+                    <h3>QUANTITY</h3>
+                    <p>Generate 500 to get 50.<br>Ideas are like Lego blocks.</p>
+                </div>
+                <div class="b-card">
+                    <h3>MINDSET</h3>
+                    <p>Defer Judgment (Covey Story).<br>Listen with RASA.<br>Observe with purpose.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-strip" style="background: black; border-top: none;"><span>SUMMARY</span><span>SLIDE 11 / 11</span></div>
+    </section>
+
+</body>
+</html>

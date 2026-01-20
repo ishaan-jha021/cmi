@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativity & Innovation: The Master Frameworks</title>
+    <style>
+        /* --- NEO-BRUTALIST EDITORIAL THEME --- */
+        :root {
+            --w: 1280px; --h: 720px;
+            --bg: #F2F0E9; --ink: #1a1a1a;
+            --red: #E63946; --blue: #457B9D; --yellow: #FFB703;
+            --green: #2A9D8F; --purple: #7b2cbf; --orange: #F4A261;
+            --border: 3px solid var(--ink);
+            --shadow: 6px 6px 0px var(--ink);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #333; font-family: 'Helvetica Now Display', 'Helvetica', sans-serif; padding: 40px 0; display: flex; flex-direction: column; align-items: center; }
+        
+        .slide {
+            width: var(--w); height: var(--h); background-color: var(--bg);
+            background-image: radial-gradient(var(--ink) 1px, transparent 1px); background-size: 30px 30px;
+            position: relative; overflow: hidden; margin-bottom: 40px; border: 1px solid #000;
+            box-shadow: 0 0 0 10px #222; page-break-after: always; display: flex;
+        }
+
+        /* Layouts */
+        .split { display: grid; grid-template-columns: 1fr 1fr; width: 100%; height: 100%; }
+        .full { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 50px; }
+        
+        .col-text { padding: 50px; display: flex; flex-direction: column; justify-content: center; border-right: 3px solid var(--ink); background: var(--bg); z-index: 2; }
+        .col-vis { background: var(--ink); display: flex; justify-content: center; align-items: center; position: relative; width: 100%; height: 100%; overflow: hidden;}
+        .col-vis.light { background: #e5e5e5; }
+
+        /* Typography */
+        h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 20px; background: var(--ink); color: var(--bg); display: inline-block; padding: 5px 15px; text-transform: uppercase; }
+        .tag { background: var(--yellow); color: var(--ink); padding: 5px 10px; font-size: 0.8rem; font-weight: bold; border: 2px solid var(--ink); display: inline-block; margin-bottom: 15px; }
+        
+        /* Components */
+        .crux { margin-top: 20px; padding: 20px; background: white; border-left: 8px solid var(--ink); font-style: italic; font-weight: 600; font-size: 1.1rem; box-shadow: var(--shadow); border: 2px solid var(--ink); border-left: 8px solid var(--ink); }
+        .b-card { background: white; border: var(--border); box-shadow: var(--shadow); padding: 15px; text-align: center; font-weight: bold; }
+
+        /* Shapes & Visuals */
+        .circle { border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; font-weight: bold; }
+        .pyramid-level { width: 100%; text-align: center; border: 2px solid var(--ink); margin-bottom: 5px; font-weight: bold; padding: 10px; }
+        .arrow-box { display: flex; align-items: center; gap: 10px; }
+        .arrow { font-size: 2rem; font-weight: bold; }
+
+        @media print { body { background: white; padding: 0; } .slide { box-shadow: none; margin: 0; border: 1px solid #ccc; } }
+    </style>
+</head>
+<body>
+
+    <!-- TITLE SLIDE -->
+    <section class="slide" style="display: block;">
+        <div style="height: 75%; padding: 80px; display: flex; flex-direction: column; justify-content: center; border-bottom: 3px solid var(--ink);">
+            <div class="tag">IIM BANGALORE (DBE)</div>
+            <h1 style="font-size: 5rem; line-height: 0.9; text-transform: uppercase; margin-bottom: 20px;">The Master<br>Frameworks.</h1>
+            <p style="font-size: 1.5rem; font-weight: 500;">Modules 01 – 04: Visual Guide to Creativity & Innovation.</p>
+        </div>
+        <div style="height: 25%; background: var(--yellow); display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;">
+            <div style="border-right: 3px solid var(--ink); display: grid; place-items: center; font-weight: bold;">FOUNDATIONS</div>
+            <div style="border-right: 3px solid var(--ink); display: grid; place-items: center; font-weight: bold;">BRAIN & MIND</div>
+            <div style="border-right: 3px solid var(--ink); display: grid; place-items: center; font-weight: bold;">PROCESS</div>
+            <div style="display: grid; place-items: center; font-weight: bold;">TOOLS</div>
+        </div>
+    </section>
+
+    <!-- 1. CREATIVITY DEFINITION -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 01</span>
+            <h2>Creativity Definition</h2>
+            <div class="crux">Creativity is not imagination (Novelty) or common sense (Utility). True creativity exists ONLY where both overlap.</div>
+        </div>
+        <div class="col-vis">
+            <svg width="400" height="400" viewBox="0 0 300 300">
+                <!-- Novelty Circle (Left) -->
+                <circle cx="100" cy="150" r="90" fill="none" stroke="white" stroke-width="3"/>
+                <text x="60" y="155" fill="white" font-weight="bold" text-anchor="middle">NOVELTY</text>
+                
+                <!-- Utility Circle (Right) -->
+                <circle cx="200" cy="150" r="90" fill="none" stroke="white" stroke-width="3"/>
+                <text x="240" y="155" fill="white" font-weight="bold" text-anchor="middle">UTILITY</text>
+                
+                <!-- Intersection (Correct Shape) -->
+                <path d="M 150 75 A 90 90 0 0 0 150 225 A 90 90 0 0 0 150 75" fill="var(--yellow)"/>
+                <text x="150" y="155" text-anchor="middle" font-weight="900" font-size="12" fill="black">CREATIVITY</text>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 1/44</span></div>
+
+    <!-- 2. FIVE DISCOVERY SKILLS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 02</span>
+            <h2>5 Discovery Skills</h2>
+            <div class="crux">Innovators don't wait for ideas. They actively Question, Observe, Experiment, and Network to Associate insights.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="position: relative; width: 400px; height: 400px;">
+                <div class="b-card" style="position: absolute; top: 0; left: 120px; background: var(--blue); color: white;">Questioning</div>
+                <div class="b-card" style="position: absolute; top: 100px; right: 0; background: var(--green); color: white;">Observing</div>
+                <div class="b-card" style="position: absolute; bottom: 100px; right: 0; background: var(--red); color: white;">Networking</div>
+                <div class="b-card" style="position: absolute; bottom: 0; left: 120px; background: var(--purple); color: white;">Experimenting</div>
+                <div class="b-card" style="position: absolute; top: 100px; left: 0; background: var(--orange);">Associating</div>
+                <div class="circle" style="position: absolute; top: 130px; left: 130px; width: 140px; height: 140px; background: var(--yellow); border: 3px solid black; z-index: 10;">DISCOVERY<br>LOOP</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 2/44</span></div>
+
+    <!-- 3. ITC MODEL -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 03</span>
+            <h2>ITC Model</h2>
+            <div class="crux">Protect emotional energy. Ignore 50% of issues, Tolerate 40%, and only Confront the critical 10%.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="width: 300px; display: flex; flex-direction: column; align-items: center;">
+                <div class="pyramid-level" style="background: var(--red); color: white; width: 30%;">CONFRONT 10%</div>
+                <div class="pyramid-level" style="background: var(--yellow); width: 60%;">TOLERATE 40%</div>
+                <div class="pyramid-level" style="background: var(--blue); color: white; width: 100%;">IGNORE 50%</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 3/44</span></div>
+
+    <!-- 4. CONTENT CONFIDENCE -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 04</span>
+        <h2>Content to Confidence</h2>
+        <div class="arrow-box" style="margin-top: 40px;">
+            <div class="b-card">CONTENT</div>
+            <div class="arrow">&rarr;</div>
+            <div class="b-card" style="background: #eee;">CLARITY</div>
+            <div class="arrow">&rarr;</div>
+            <div class="b-card" style="background: #ccc;">COURAGE</div>
+            <div class="arrow">&rarr;</div>
+            <div class="b-card" style="background: var(--yellow);">CONFIDENCE</div>
+        </div>
+        <div class="crux" style="margin-top: 40px;">Confidence is the outcome, not the start. It begins with Knowledge (Content) creating Clarity.</div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 4/44</span></div>
+
+    <!-- 5. FOUR DRIVERS -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 05</span>
+        <h2>4 Drivers of Creativity</h2>
+        <div style="display: flex; align-items: flex-end; gap: 20px; height: 300px; margin-top: 30px;">
+            <div style="width: 100px; height: 30%; background: #ffcccc; border: 3px solid black; text-align: center; padding: 5px;">Fear</div>
+            <div style="width: 100px; height: 50%; background: #ffe5cc; border: 3px solid black; text-align: center; padding: 5px;">Greed</div>
+            <div style="width: 100px; height: 60%; background: #e6f2ff; border: 3px solid black; text-align: center; padding: 5px;">Duty</div>
+            <div style="width: 100px; height: 90%; background: var(--green); border: 3px solid black; text-align: center; padding: 5px; color: white; font-weight: bold;">LOVE</div>
+        </div>
+        <div class="crux">Fear and Greed exhaust you. Duty limits you. Only Love (Intrinsic Passion) is sustainable.</div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 5/44</span></div>
+
+    <!-- 6. ZOC vs ZOI -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 06</span>
+            <h2>Zone of Influence</h2>
+            <div class="crux">Creativity dies in the Zone of Concern (Worry). It thrives in the Zone of Influence (Action).</div>
+        </div>
+        <div class="col-vis">
+            <div class="circle" style="width: 350px; height: 350px; background: #555; border: 2px dashed white; color: white;">
+                Concern
+                <div class="circle" style="width: 180px; height: 180px; background: var(--green); border: 3px solid white; color: black; margin-left: 20px;">INFLUENCE</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 6/44</span></div>
+
+    <!-- 7. CIRCLE OF INFLUENCE (3 ORBITS) -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 07</span>
+            <h2>3-Orbit Model</h2>
+            <div class="crux">Prioritize energy: 1. Yourself (Health/Mind), 2. Inner Circle (Family/Team), 3. The World.</div>
+        </div>
+        <div class="col-vis light">
+            <div class="circle" style="width: 300px; height: 300px; border: 3px solid black;">World
+                <div class="circle" style="width: 200px; height: 200px; border: 3px solid black; background: #eee;">Inner 5
+                    <div class="circle" style="width: 100px; height: 100px; background: var(--yellow); border: 3px solid black;">YOU</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 7/44</span></div>
+
+    <!-- 8. NINE DOTS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 08</span>
+            <h2>Think Outside the Box</h2>
+            <div class="crux">Problems persist because of self-imposed mental boundaries. The solution often lies beyond the perceived limits.</div>
+        </div>
+        <div class="col-vis">
+            <div style="display: grid; grid-template-columns: repeat(3, 30px); gap: 30px;">
+                <div class="circle" style="width: 20px; height: 20px; background: white;"></div><div class="circle" style="width: 20px; height: 20px; background: white;"></div><div class="circle" style="width: 20px; height: 20px; background: white;"></div>
+                <div class="circle" style="width: 20px; height: 20px; background: white;"></div><div class="circle" style="width: 20px; height: 20px; background: white;"></div><div class="circle" style="width: 20px; height: 20px; background: white;"></div>
+                <div class="circle" style="width: 20px; height: 20px; background: white;"></div><div class="circle" style="width: 20px; height: 20px; background: white;"></div><div class="circle" style="width: 20px; height: 20px; background: white;"></div>
+            </div>
+            <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                <polyline points="200,200 350,200 100,450 100,200 350,450" fill="none" stroke="var(--yellow)" stroke-width="5" opacity="0.8"/>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 8/44</span></div>
+
+    <!-- 9. FALSE ASSUMPTIONS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 09</span>
+            <h2>False Assumptions</h2>
+            <div class="crux">Creativity creates breakthroughs by questioning "Fixed" rules. (e.g., Coin & Shovel puzzle).</div>
+        </div>
+        <div class="col-vis light">
+            <div class="b-card" style="width: 200px;">Assumed Fixed</div>
+            <div style="font-size: 2rem; margin: 20px;">&darr;</div>
+            <div class="b-card" style="width: 200px; background: var(--red); color: white;">ACTUALLY MOVABLE</div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 9/44</span></div>
+
+    <!-- 10. URGENT IMPORTANT -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 10</span>
+            <h2>Urgent-Important</h2>
+            <div class="crux">Creativity thrives in Quadrant II: Important but Not Urgent. Avoid the "Urgency Trap".</div>
+        </div>
+        <div class="col-vis light">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div class="b-card">I. Crisis</div>
+                <div class="b-card" style="background: var(--green); color: white;">II. CREATIVITY</div>
+                <div class="b-card">III. Distraction</div>
+                <div class="b-card">IV. Waste</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 10/44</span></div>
+
+    <!-- 11. HIGH LEVERAGE -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 11</span>
+        <h2>High Leverage Activities</h2>
+        <div style="display: flex; align-items: center; margin-top: 40px;">
+            <div class="circle" style="width: 100px; height: 100px; background: var(--blue); color: white;">Small Effort</div>
+            <div style="font-size: 4rem; margin: 0 20px;">&rarr;</div>
+            <div class="circle" style="width: 300px; height: 300px; background: var(--yellow); border: 4px solid black; font-size: 2rem;">MASSIVE<br>IMPACT</div>
+        </div>
+        <div class="crux" style="margin-top: 30px;">Identify actions where output is disproportionately higher than input (e.g., Writing, Training).</div>
+    </section>
+    <div class="footer"><span>MODULE 1</span><span>FRAMEWORK 11/44</span></div>
+
+    <!-- 12. 3 COMPONENTS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 12</span>
+            <h2>3 Components</h2>
+            <div class="crux">Creativity = Expertise × Skills × Motivation. If one is zero, the result is zero.</div>
+        </div>
+        <div class="col-vis">
+            <svg width="300" height="300" viewBox="0 0 200 200">
+                <polygon points="100,20 20,180 180,180" fill="none" stroke="white" stroke-width="3"/>
+                <text x="100" y="60" text-anchor="middle" fill="white" font-size="10">EXPERTISE</text>
+                <text x="60" y="160" text-anchor="middle" fill="white" font-size="10">SKILLS</text>
+                <text x="140" y="160" text-anchor="middle" fill="white" font-size="10">MOTIVATION</text>
+                <text x="100" y="120" text-anchor="middle" fill="var(--yellow)" font-weight="bold" font-size="14">CREATIVITY</text>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 12/44</span></div>
+
+    <!-- 13. BRAIN INTEGRATION -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 13</span>
+            <h2>Brain Integration</h2>
+            <div class="crux">Creativity isn't just "Right Brain". It is the bridge (Prefrontal Cortex) combining Logic and Imagination.</div>
+        </div>
+        <div class="col-vis light">
+            <div class="b-card" style="margin-right: 10px;">LEFT<br>(Logic)</div>
+            <div style="height: 5px; width: 50px; background: black;"></div>
+            <div class="circle" style="width: 80px; height: 80px; background: var(--yellow); border: 2px solid black; z-index: 2;">BRIDGE</div>
+            <div style="height: 5px; width: 50px; background: black;"></div>
+            <div class="b-card" style="margin-left: 10px;">RIGHT<br>(Art)</div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 13/44</span></div>
+
+    <!-- 14. LATENT INHIBITION -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 14</span>
+            <h2>Latent Inhibition</h2>
+            <div class="crux">Creativity requires Low Latent Inhibition—filtering out less information to see hidden connections.</div>
+        </div>
+        <div class="col-vis">
+            <div style="display: flex; gap: 20px;">
+                <div style="text-align: center; color: white;">
+                    <div style="width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 100px solid gray;"></div>
+                    <p>High Filter<br>(Normal)</p>
+                </div>
+                <div style="text-align: center; color: var(--yellow);">
+                    <div style="width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 100px solid var(--yellow);"></div>
+                    <p>Low Filter<br>(Creative)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 14/44</span></div>
+
+    <!-- 15. FLOW STATE -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 15</span>
+            <h2>Flow State</h2>
+            <div class="crux">Peak creativity happens in the "Flow Channel", where Challenge exactly matches Skill.</div>
+        </div>
+        <div class="col-vis light">
+            <svg width="300" height="300" viewBox="0 0 200 200">
+                <line x1="20" y1="180" x2="20" y2="20" stroke="black" stroke-width="2"/>
+                <line x1="20" y1="180" x2="180" y2="180" stroke="black" stroke-width="2"/>
+                <text x="10" y="20" font-size="10">Challenge</text>
+                <text x="160" y="190" font-size="10">Skill</text>
+                <path d="M 20 180 L 180 20" stroke="var(--purple)" stroke-width="20" opacity="0.5"/>
+                <text x="80" y="100" font-weight="bold" fill="var(--purple)">FLOW</text>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 15/44</span></div>
+
+    <!-- 16. SYSTEM 1 vs 2 -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 16</span>
+            <h2>System 1 vs 2</h2>
+            <div class="crux">Creativity requires System 2 (Slow, Deliberate) to override System 1 (Fast, Automatic).</div>
+        </div>
+        <div class="col-vis light">
+            <div class="split">
+                <div style="background: #eee; display: grid; place-items: center; text-align: center; padding: 20px;">
+                    <h3>Sys 1</h3><p>Fast<br>Instinct</p>
+                </div>
+                <div style="background: var(--blue); color: white; display: grid; place-items: center; text-align: center; padding: 20px;">
+                    <h3>Sys 2</h3><p>Slow<br>Creative</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 16/44</span></div>
+
+    <!-- 17. T-SHAPED SKILLS -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 17</span>
+        <h2>T-Shaped Skills</h2>
+        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 30px;">
+            <div class="b-card" style="width: 600px; background: var(--yellow);">Breadth of Knowledge (Generalist)</div>
+            <div class="b-card" style="width: 150px; height: 300px; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center;">Depth (Expert)</div>
+        </div>
+        <div class="crux" style="margin-top: 20px;">Creative people combine deep expertise in one field with broad knowledge in many.</div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 17/44</span></div>
+
+    <!-- 18. CURIOSITY > PASSION -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 18</span>
+            <h2>Curiosity > Passion</h2>
+            <div class="crux">Don't wait for passion. Follow curiosity, and passion will eventually follow.</div>
+        </div>
+        <div class="col-vis">
+            <div class="arrow-box" style="color: white;">
+                <div>CURIOSITY</div>
+                <div class="arrow">&rarr;</div>
+                <div style="color: var(--yellow); font-weight: bold; font-size: 2rem;">PASSION</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 18/44</span></div>
+
+    <!-- 19. GRIT x TINKERING -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 19</span>
+        <h2>The Formula</h2>
+        <div style="font-size: 4rem; font-weight: 900; margin: 40px 0;">
+            GRIT <span style="color: var(--red);">×</span> TINKERING
+        </div>
+        <div class="crux">Creativity needs both: The persistence to keep going (Grit) and the flexibility to change approach (Tinkering).</div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 19/44</span></div>
+
+    <!-- 20. FAILURE PIVOT LOOP -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 20</span>
+            <h2>Pivot Loop</h2>
+            <div class="crux">Progress isn't linear. It's a cycle of trying, failing, learning, and pivoting.</div>
+        </div>
+        <div class="col-vis light">
+            <div class="circle" style="width: 300px; height: 300px; border: 5px dashed black;">
+                <div style="position: absolute; top: 20px;">TRY</div>
+                <div style="position: absolute; right: 20px;">FAIL</div>
+                <div style="position: absolute; bottom: 20px;">LEARN</div>
+                <div style="position: absolute; left: 20px;">PIVOT</div>
+                <div style="font-size: 4rem;">&#8635;</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 20/44</span></div>
+
+    <!-- 21. THREE NON MEDITATION -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 21</span>
+        <h2>Three "Non"s</h2>
+        <div style="display: flex; gap: 40px; margin-top: 40px;">
+            <div class="b-card" style="width: 200px; height: 300px; display: grid; place-items: center;">NON<br>ATTACHMENT</div>
+            <div class="b-card" style="width: 200px; height: 300px; background: var(--green); color: white; display: grid; place-items: center;">NON<br>RESISTANCE</div>
+            <div class="b-card" style="width: 200px; height: 300px; display: grid; place-items: center;">NON<br>JUDGMENT</div>
+        </div>
+        <div class="crux" style="margin-top: 30px;">Mental stability pillars for creativity. Detach from outcomes, accept reality, avoid bias.</div>
+    </section>
+    <div class="footer"><span>MODULE 2</span><span>FRAMEWORK 21/44</span></div>
+
+    <!-- 22. CPS PROCESS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 22</span>
+            <h2>CPS Process</h2>
+            <div class="crux">Most fail by skipping step 1. Understanding the problem is 50% of the solution.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="display: flex; flex-direction: column; gap: 20px; width: 60%;">
+                <div class="b-card" style="background: var(--blue); color: white;">1. EXPLORATION</div>
+                <div class="arrow" style="text-align: center; color: black;">&darr;</div>
+                <div class="b-card">2. GENERATION</div>
+                <div class="arrow" style="text-align: center; color: black;">&darr;</div>
+                <div class="b-card">3. VALIDATION</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 22/44</span></div>
+
+    <!-- 23. DIVERGENT CONVERGENT -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 23</span>
+            <h2>Thinking Modes</h2>
+            <div class="crux">Expand first (Divergent), narrow later (Convergent). Mixing them kills ideas.</div>
+        </div>
+        <div class="col-vis">
+            <svg width="400" height="300" viewBox="0 0 300 200">
+                <path d="M 10 100 L 150 10 L 150 190 Z" fill="none" stroke="white" stroke-width="2"/>
+                <path d="M 150 10 L 290 100 L 150 190 Z" fill="white"/>
+                <text x="60" y="105" fill="white" font-size="10">EXPAND</text>
+                <text x="200" y="105" fill="black" font-weight="bold" font-size="10">NARROW</text>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 23/44</span></div>
+
+    <!-- 24. RASA LISTENING -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 24</span>
+            <h2>RASA Framework</h2>
+            <div class="crux">Listening multiplies creativity. Receive, Appreciate, Summarize, Ask.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="display: flex; flex-direction: column; width: 200px;">
+                <div class="b-card" style="background: var(--ink); color: white;">RECEIVE</div>
+                <div class="b-card" style="background: var(--ink); color: white;">APPRECIATE</div>
+                <div class="b-card" style="background: var(--ink); color: white;">SUMMARIZE</div>
+                <div class="b-card" style="background: var(--green); color: white;">ASK</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 24/44</span></div>
+
+    <!-- 25. LISTEN VS HEAR -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 25</span>
+            <h2>Listen vs Hear</h2>
+            <div class="crux">Hearing is passive physiology. Listening is active psychology.</div>
+        </div>
+        <div class="col-vis">
+            <div style="font-size: 8rem; color: white;">👂 vs 🧠</div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 25/44</span></div>
+
+    <!-- 26. JUDGMENT VS OBSERVE -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 26</span>
+        <h2>Judgment vs Observation</h2>
+        <div style="display: flex; gap: 50px; margin-top: 40px; align-items: center;">
+            <div style="opacity: 0.3; text-decoration: line-through; font-size: 3rem; font-weight: bold;">JUDGMENT</div>
+            <div style="font-size: 3rem;">&rarr;</div>
+            <div class="b-card" style="background: var(--yellow); font-size: 3rem;">OBSERVATION</div>
+        </div>
+        <div class="crux" style="margin-top: 30px;">Judgment stops learning. Observation opens possibilities.</div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 26/44</span></div>
+
+    <!-- 27. CONTEXT REFRAMING -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 27</span>
+            <h2>Context Reframing</h2>
+            <div class="crux">The same situation looks completely different when you change the frame (Stephen Covey example).</div>
+        </div>
+        <div class="col-vis light">
+            <div class="b-card" style="transform: rotate(-5deg); margin-bottom: 20px;">Viewpoint A</div>
+            <div class="b-card" style="transform: rotate(5deg); background: var(--blue); color: white;">Viewpoint B</div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 27/44</span></div>
+
+    <!-- 28. 5 WHYS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 28</span>
+            <h2>5 Whys</h2>
+            <div class="crux">Don't fix symptoms. Ask "Why?" five times to find the root cause.</div>
+        </div>
+        <div class="col-vis">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                <div class="b-card">Why?</div>
+                <div class="b-card">Why?</div>
+                <div class="b-card">Why?</div>
+                <div class="b-card">Why?</div>
+                <div class="b-card" style="background: var(--red); color: white;">ROOT CAUSE</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 28/44</span></div>
+
+    <!-- 29. 5W 2H -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 29</span>
+            <h2>5W + 2H</h2>
+            <div class="crux">Explore problems from all angles: Who, What, When, Where, Why, How, How Much.</div>
+        </div>
+        <div class="col-vis light">
+            <div class="circle" style="width: 150px; height: 150px; border: 3px solid black; background: white;">PROBLEM
+                <div style="position: absolute; transform: translate(0, -120px);">WHO</div>
+                <div style="position: absolute; transform: translate(120px, 0);">WHAT</div>
+                <div style="position: absolute; transform: translate(0, 120px);">HOW</div>
+                <div style="position: absolute; transform: translate(-120px, 0);">WHY</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 29/44</span></div>
+
+    <!-- 30. FISHBONE -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 30</span>
+        <h2>Fishbone Diagram</h2>
+        <svg width="800" height="300" style="margin-top: 30px;">
+            <line x1="50" y1="150" x2="700" y2="150" stroke="black" stroke-width="4"/>
+            <polygon points="700,150 780,100 780,200" fill="var(--red)"/>
+            <line x1="150" y1="50" x2="250" y2="150" stroke="black" stroke-width="2"/>
+            <text x="150" y="40" text-anchor="middle" font-weight="bold">MAN</text>
+            <line x1="350" y1="50" x2="450" y2="150" stroke="black" stroke-width="2"/>
+            <text x="350" y="40" text-anchor="middle" font-weight="bold">MACHINE</text>
+            <line x1="150" y1="250" x2="250" y2="150" stroke="black" stroke-width="2"/>
+            <text x="150" y="270" text-anchor="middle" font-weight="bold">METHOD</text>
+        </svg>
+        <div class="crux" style="margin-top: 20px;">Use for complex systems to map all contributing factors to a problem.</div>
+    </section>
+    <div class="footer"><span>MODULE 3</span><span>FRAMEWORK 30/44</span></div>
+
+    <!-- 31. QUANTITY QUALITY -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 31</span>
+            <h2>Quantity = Quality</h2>
+            <div class="crux">Great ideas are a statistical inevitability of many average ideas. Generate trash to find treasure.</div>
+        </div>
+        <div class="col-vis">
+            <svg width="300" height="300" viewBox="0 0 200 200">
+                <polygon points="20,20 180,20 100,180" fill="none" stroke="white" stroke-width="2"/>
+                <circle cx="50" cy="50" r="5" fill="gray"/> <circle cx="100" cy="50" r="5" fill="gray"/> <circle cx="150" cy="50" r="5" fill="gray"/>
+                <circle cx="100" cy="150" r="10" fill="var(--yellow)"/>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 31/44</span></div>
+
+    <!-- 32. BRAIN WRITING -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 32</span>
+            <h2>Brain Writing</h2>
+            <div class="crux">Silent writing beats loud brainstorming. It prevents groupthink and domination.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div class="b-card" style="background: #ffffcc; height: 80px;"></div>
+                <div class="b-card" style="background: #ffffcc; height: 80px;"></div>
+                <div class="b-card" style="background: #ffffcc; height: 80px;"></div>
+                <div class="b-card" style="background: #ffffcc; height: 80px;"></div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 32/44</span></div>
+
+    <!-- 33. ASSUMPTIONS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 33</span>
+            <h2>Break Assumptions</h2>
+            <div class="crux">Innovation begins by cracking open what everyone else takes for granted.</div>
+        </div>
+        <div class="col-vis">
+            <svg width="300" height="300" viewBox="0 0 200 200">
+                <rect x="50" y="50" width="100" height="100" fill="var(--ink)" stroke="white"/>
+                <polyline points="100,50 80,100 120,120 100,150" fill="none" stroke="var(--yellow)" stroke-width="5"/>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 33/44</span></div>
+
+    <!-- 34. SCAMPER -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 34</span>
+            <h2>SCAMPER</h2>
+            <div class="crux">Systematic creativity: Substitute, Combine, Adapt, Modify, Put to use, Eliminate, Reverse.</div>
+        </div>
+        <div class="col-vis light">
+            <div class="circle" style="width: 150px; height: 150px; background: var(--blue); color: white; border: 3px solid black;">IDEA</div>
+            <div style="position: absolute; top: 20px; font-weight: bold;">S</div>
+            <div style="position: absolute; top: 60px; right: 20px; font-weight: bold;">C</div>
+            <div style="position: absolute; bottom: 60px; right: 20px; font-weight: bold;">A</div>
+            <div style="position: absolute; bottom: 20px; font-weight: bold;">M</div>
+            <div style="position: absolute; bottom: 60px; left: 20px; font-weight: bold;">P</div>
+            <div style="position: absolute; top: 60px; left: 20px; font-weight: bold;">E/R</div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 34/44</span></div>
+
+    <!-- 35. BLUE OCEAN -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 35</span>
+            <h2>Blue Ocean</h2>
+            <div class="crux">Create new demand. Look across industries, groups, and time to find uncontested space.</div>
+        </div>
+        <div class="col-vis">
+            <svg width="300" height="300" viewBox="0 0 200 200">
+                <polygon points="100,10 190,55 190,145 100,190 10,145 10,55" fill="none" stroke="var(--blue)" stroke-width="5"/>
+                <text x="100" y="105" fill="white" text-anchor="middle" font-size="10">6 TRIGGERS</text>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 35/44</span></div>
+
+    <!-- 36. FOUR TIERS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 36</span>
+            <h2>4 Tiers of Users</h2>
+            <div class="crux">Biggest growth lies in the "Unexplored" tier, not with loyal customers.</div>
+        </div>
+        <div class="col-vis light">
+            <svg width="300" height="300" viewBox="0 0 300 300">
+                <polygon points="10,10 290,10 150,290" fill="var(--green)"/>
+                <text x="150" y="60" text-anchor="middle" font-weight="bold">UNEXPLORED</text>
+                <line x1="40" y1="80" x2="260" y2="80" stroke="black"/>
+                <text x="150" y="120" text-anchor="middle">REFUSING</text>
+                <line x1="70" y1="140" x2="230" y2="140" stroke="black"/>
+                <text x="150" y="180" text-anchor="middle">DISSATISFIED</text>
+                <line x1="100" y1="200" x2="200" y2="200" stroke="black"/>
+                <text x="150" y="250" text-anchor="middle" fill="white" font-size="10">LOYAL</text>
+            </svg>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 36/44</span></div>
+
+    <!-- 37. BUYER UTILITY -->
+    <section class="slide full">
+        <span class="tag">FRAMEWORK 37</span>
+        <h2>Buyer Utility Map</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; background: black; width: 80%; padding: 2px;">
+            <div class="b-card" style="margin: 0;">STAGE</div> <div class="b-card" style="margin: 0;">UTILITY</div> <div class="b-card" style="margin: 0;">PAIN</div>
+            <div class="b-card" style="margin: 0;">Purchase</div> <div class="b-card" style="margin: 0;"></div> <div class="b-card" style="margin: 0;"></div>
+            <div class="b-card" style="margin: 0;">Use</div> <div class="b-card" style="margin: 0;"></div> <div class="b-card" style="margin: 0;"></div>
+            <div class="b-card" style="margin: 0;">Disposal</div> <div class="b-card" style="margin: 0;"></div> <div class="b-card" style="margin: 0;"></div>
+        </div>
+        <div class="crux" style="margin-top: 20px;">Map the journey against utility levers to find hidden pain points.</div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 37/44</span></div>
+
+    <!-- 38. JOURNEY FLOW -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 38</span>
+            <h2>Buyer Journey</h2>
+            <div class="crux">Customer experience is sequential. Break it down to fix it.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="display: flex; gap: 10px;">
+                <div class="b-card">Find</div>&rarr;<div class="b-card">Buy</div>&rarr;<div class="b-card">Use</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 38/44</span></div>
+
+    <!-- 39. BIOMIMICRY -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 39</span>
+            <h2>Biomimicry</h2>
+            <div class="crux">Don't invent; borrow. Nature and other industries have already solved your problem.</div>
+        </div>
+        <div class="col-vis">
+            <div class="arrow-box" style="color: white;">
+                <div>NATURE</div>
+                <div class="arrow">&rarr;</div>
+                <div class="b-card">SOLUTION</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 39/44</span></div>
+
+    <!-- 40. EXTREMES -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 40</span>
+            <h2>Extremes</h2>
+            <div class="crux">Design for the edge case (Extreme), and you'll solve for the middle (Mainstream).</div>
+        </div>
+        <div class="col-vis light">
+            <div class="circle" style="width: 300px; height: 300px; border: 3px dashed var(--red);">EXTREME
+                <div class="circle" style="width: 150px; height: 150px; background: var(--blue); color: white; border: 3px solid black;">MAINSTREAM</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 40/44</span></div>
+
+    <!-- 41. SCQA -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 41</span>
+            <h2>SCQA Storytelling</h2>
+            <div class="crux">Align audience thinking: Context (S) -> Problem (C) -> Question (Q) -> Answer (A).</div>
+        </div>
+        <div class="col-vis">
+            <div style="display: flex; flex-direction: column; gap: 10px; width: 60%;">
+                <div class="b-card" style="margin-left: 0;">S</div>
+                <div class="b-card" style="margin-left: 20px;">C</div>
+                <div class="b-card" style="margin-left: 40px;">Q</div>
+                <div class="b-card" style="margin-left: 60px; background: var(--yellow);">A</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 41/44</span></div>
+
+    <!-- 42. PYRAMID PRINCIPLE -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 42</span>
+            <h2>Pyramid Principle</h2>
+            <div class="crux">Start with the Answer. Support it with Arguments. Back it with Data.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="text-align: center;">
+                <div class="b-card" style="background: var(--green); color: white;">ANSWER</div>
+                <div style="display: flex; gap: 10px;">
+                    <div class="b-card">Arg</div><div class="b-card">Arg</div><div class="b-card">Arg</div>
+                </div>
+                <div style="width: 100%; height: 10px; background: black; margin-top: 5px;"></div>
+                <div style="font-size: 0.8rem; font-weight: bold;">DATA</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 42/44</span></div>
+
+    <!-- 43. SUCCESS -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 43</span>
+            <h2>SUCCESS</h2>
+            <div class="crux">Sticky ideas are Simple, Unexpected, Concrete, Credible, Emotional, Stories.</div>
+        </div>
+        <div class="col-vis">
+            <div style="font-size: 3rem; font-weight: 900; line-height: 1.2; color: white;">
+                S<br>U<br>C<br>C<br>E<br>S
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 43/44</span></div>
+
+    <!-- 44. IMPACT MATRIX -->
+    <section class="slide split">
+        <div class="col-text">
+            <span class="tag">FRAMEWORK 44</span>
+            <h2>Impact-Time</h2>
+            <div class="crux">Focus on Stars (High Impact/Low Effort). Avoid Pipe Dreams.</div>
+        </div>
+        <div class="col-vis light">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+                <div class="b-card" style="background: var(--yellow);">STARS</div>
+                <div class="b-card">Projects</div>
+                <div class="b-card">Quick Wins</div>
+                <div class="b-card" style="background: #ccc;">Drop</div>
+            </div>
+        </div>
+    </section>
+    <div class="footer"><span>MODULE 4</span><span>FRAMEWORK 44/44</span></div>
+
+</body>
+</html>
